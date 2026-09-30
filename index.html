@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moto Elétrica Atravessa a Rua</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-wrap">
+    <div class="topbar">
+      <div class="logo">🏍️ E-MOTO CROSS</div>
+      <div class="stats">
+        <span>PONTOS <b id="score">0</b></span>
+        <span>RECORDE <b id="best">0</b></span>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <canvas id="game" width="800" height="600"></canvas>
+      <div id="startScreen" class="overlay">
+        <div class="panel">
+          <div class="big-chicken">🏍️</div>
+          <h1>MOTO ELÉTRICA<br>ATRAVESSA A RUA</h1>
+          <p>Pilote sua moto elétrica até o outro lado sem ser atingido!</p>
+          <button id="startBtn">JOGAR</button>
+          <small>Use WASD ou as SETAS para andar</small>
+        </div>
+      </div>
+
+      <div id="gameOver" class="overlay hidden">
+        <div class="panel">
+          <div class="big-chicken">💥🏍️</div>
+          <h2>FIM DE JOGO</h2>
+          <p>Pontuação: <b id="finalScore">0</b></p>
+          <button id="restartBtn">JOGAR NOVAMENTE</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <span>↑ / W — avançar</span>
+      <span>← A / D → — mover</span>
+      <span>↓ / S — voltar</span>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

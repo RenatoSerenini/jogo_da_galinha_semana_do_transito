@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #11151b;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+}
+
+.game-wrap {
+  width: min(900px, 100%);
+}
+
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  background: #222832;
+  border: 4px solid #0c0f13;
+  box-shadow: 0 5px 0 #080a0d;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.stats {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+  color: #bfc7d1;
+}
+
+.stats b {
+  color: #ffe45c;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.game-area {
+  position: relative;
+  margin-top: 8px;
+  background: #82b53d;
+  border: 5px solid #0c0f13;
+  box-shadow: 0 6px 0 #080a0d;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 8, 10, 0.58);
+  backdrop-filter: blur(2px);
+}
+
+.hidden {
+  display: none;
+}
+
+.panel {
+  width: min(420px, 88%);
+  padding: 28px;
+  text-align: center;
+  background: #28303a;
+  border: 5px solid #101318;
+  box-shadow: 8px 8px 0 #101318;
+}
+
+.big-chicken {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.panel h1, .panel h2 {
+  margin: 5px 0 12px;
+  color: #ffe45c;
+  font-weight: 900;
+}
+
+.panel h1 {
+  font-size: 29px;
+}
+
+.panel h2 {
+  font-size: 34px;
+}
+
+.panel p {
+  color: #e3e8ed;
+  line-height: 1.5;
+}
+
+.panel small {
+  display: block;
+  margin-top: 15px;
+  color: #aeb7c2;
+}
+
+button {
+  border: 4px solid #101318;
+  background: #ffe45c;
+  color: #161a20;
+  padding: 13px 25px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #101318;
+}
+
+button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #101318;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 30px;
+  padding: 14px;
+  color: #aeb7c2;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  body { padding: 6px; }
+  .topbar { height: 54px; padding: 0 10px; }
+  .logo { font-size: 15px; }
+  .stats { gap: 8px; font-size: 10px; }
+  .stats b { font-size: 15px; }
+  .controls { font-size: 11px; }
+}
+
+
+/* A área segura do jogo é desenhada pelo Canvas.
+   Estas regras deixam a interface preparada para um aviso de descanso. */
+.safe-zone-note {
+  color: #d9f875;
+  font-weight: 700;
+}
